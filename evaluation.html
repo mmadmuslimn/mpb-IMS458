@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Evaluation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="attractions.html">Attractions</a>
+  <a href="stays.html">Stay</a>
+  <a href="food.html">Food</a>
+  <a href="evaluation.html" Id="current-page">Evaluate Us</a>
+  <a href="about-us.html">About Us</a>
+</nav>
+
+<header class="evaluationheader">
+  <h1>Your Feedback Matters</h1>
+  <p>Share your thoughts to help us enhance your experience</p>
+</header>
+
+
+
+<!-- MAIN CONTENT CONTAINER -->
+<div class="container">
+  <h1>Evaluate Our Website</h1>
+  <p>Your feedback helps us improve. Please rate your experience and share any comments!</p>
+
+  <form id="feedbackForm">
+    <!-- STAR RATING -->
+    <div class="star-rating">
+      <!-- 5 is best -->
+      <input type="radio" id="star5" name="user_rating" value="5">
+      <label for="star5">&#9733;</label>
+
+      <input type="radio" id="star4" name="user_rating" value="4">
+      <label for="star4">&#9733;</label>
+
+      <input type="radio" id="star3" name="user_rating" value="3">
+      <label for="star3">&#9733;</label>
+
+      <input type="radio" id="star2" name="user_rating" value="2">
+      <label for="star2">&#9733;</label>
+
+      <input type="radio" id="star1" name="user_rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+
+    <label for="user_name">Your Name (Optional)</label>
+    <input type="text" id="user_name" name="user_name" placeholder="e.g. Muhammadia">
+
+    <label for="user_email">Email (Optional)</label>
+    <input type="email" id="user_email" name="user_email" placeholder="e.g. example@mail.com">
+
+    <label for="user_comments">Comments / Feedback</label>
+    <textarea id="user_comments" name="user_comments" placeholder="Tell us about your experience..."></textarea>
+
+    <button type="submit" class="btn">Send Feedback</button>
+  </form>
+
+  <!-- Status message div (hidden by default) -->
+  <div id="statusMessage" style="display:none; margin-top: 20px; font-weight: bold;"></div>
+</div>
+
+  <!-- EMAILJS LIBRARY -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- External JS file with your EmailJS code -->
+  <script src="evaluation.js"></script>
+
+<footer>
+  <p>Website for assignment purposes. IMS458 | Best viewed on desktop browsers view.<br>Contact us: <a href="mailto:2023674252@student.uitm.edu.my">2023674252@student.uitm.edu.my </a> My Profile: <a href="aboutme.html">Muhammadia Bin Muslimin</a><br>&copy; 2025 Discover Besut. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
