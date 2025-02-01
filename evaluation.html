@@ -12,7 +12,7 @@
 
 
 <nav>
-  <a href="home.html">Home</a>
+  <a href="index.html">Home</a>
   <a href="attractions.html">Attractions</a>
   <a href="stays.html">Stay</a>
   <a href="food.html">Food</a>
@@ -27,15 +27,14 @@
 
 
 
-<!-- MAIN CONTENT CONTAINER -->
 <div class="container">
   <h1>Evaluate Our Website</h1>
   <p>Your feedback helps us improve. Please rate your experience and share any comments!</p>
 
   <form id="feedbackForm">
-    <!-- STAR RATING -->
+
     <div class="star-rating">
-      <!-- 5 is best -->
+
       <input type="radio" id="star5" name="user_rating" value="5">
       <label for="star5">&#9733;</label>
 
@@ -64,14 +63,10 @@
     <button type="submit" class="btn">Send Feedback</button>
   </form>
 
-  <!-- Status message div (hidden by default) -->
   <div id="statusMessage" style="display:none; margin-top: 20px; font-weight: bold;"></div>
 </div>
 
-  <!-- EMAILJS LIBRARY -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  
-  <!-- External JS file with your EmailJS code -->
   <script src="evaluation.js"></script>
 
 <footer>
