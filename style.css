@@ -69,7 +69,8 @@ header {
 }
 
 .aboutusheader {
-  background-position: 10% 170%;
+
+  background-position: 10% 220%;
   background-image: url("images/aboutus.jpg");
   max-width: 100%;
 }
@@ -210,6 +211,8 @@ section h2 {
 .attraction {
   background: white;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -220,6 +223,7 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin-top: 20px;
+  align-items: stretch;
 }
 
 .attraction:hover {
@@ -236,6 +240,13 @@ section h2 {
 .attraction-content {
   padding: 20px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.attraction-content .attractions-btn {
+  margin-top: auto; /* Positions the button at the very bottom */
 }
 
 .attraction-content h3 {
@@ -246,10 +257,37 @@ section h2 {
 }
 
 .attraction-content p {
+  text-align: justify;
   font-size: 1em;
   color: #555;
   margin-bottom: 10px;
   line-height: 1.5;
+ margin-bottom: auto; /* This helps push the button down if needed */
+}
+
+.attractions-btn {
+  text-align: center;
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px; 
+  font-family: "Roboto", sans-serif; 
+  background-color: #0D47A1;
+  color: #ffffff;
+  border: 2px solid #0D47A1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              box-shadow 0.3s ease;
+
+}
+
+.attractions-btn:hover {
+  background-color: #1565C0;
+  color: #ffffff; /* Keep text white or change if you want */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .interactiveMap {
@@ -579,11 +617,11 @@ footer a:hover {
     .star-rating {
       margin-bottom: 1em;
       display: flex;
-flex-direction: row-reverse; 
+      flex-direction: row-reverse; 
       justify-content: center;
       gap: 5px;
     }
-    /* Hide the actual radio buttons */
+
     .star-rating input {
       display: none;
     }
@@ -593,17 +631,16 @@ flex-direction: row-reverse;
       cursor: pointer;
       transition: color 0.2s;
     }
-    /* On hover, highlight current star and the ones to the left */
+
     .star-rating label:hover,
     .star-rating label:hover ~ label {
       color: gold;
     }
-    /* When checked, turn all preceding stars gold */
+
     .star-rating input:checked ~ label {
       color: gold;
     }
 
-    /* BUTTON STYLING */
     .btn {
       display: inline-block;
       width: 150px;
@@ -622,12 +659,12 @@ flex-direction: row-reverse;
       background: #0056b3;
     }
 
-    /* SUCCESS/ERROR MESSAGES */
+   
     #statusMessage {
       text-align: center;
       font-weight: bold;
       margin-top: 15px;
-      display: none; /* hidden by default */
+      display: none;
     }
     #statusMessage.success {
       color: green;
