@@ -1,6 +1,5 @@
 
   (function() {
-    // Replace this string with your actual EmailJS Public Key
     emailjs.init("n3UG2JqG8dDrSeR3B"); 
   })();
 
@@ -8,7 +7,7 @@
   const statusMessage = document.getElementById('statusMessage');
 
   feedbackForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent page refresh on submit
+    event.preventDefault();
 
 
     statusMessage.style.display = 'none';
@@ -26,10 +25,9 @@
       statusMessage.style.color = "green";
       statusMessage.style.display = 'block';
 
-      // Reset the form
+
       feedbackForm.reset();
     }, function(error) {
-      // On error
       statusMessage.innerText = "Oops! Something went wrong. Please try again later.";
       statusMessage.className = "error";
       statusMessage.style.color = "red";
