@@ -14,14 +14,13 @@
     statusMessage.style.display = 'none';
 
     emailjs.send("service_1za3mum", "template_l8xdpcl", {
-      // These keys must match the placeholders in your EmailJS template
+
       from_name: feedbackForm.user_name.value,
       user_email: feedbackForm.user_email.value,
       user_rating: feedbackForm.user_rating.value,
       message: feedbackForm.user_comments.value
     })
     .then(function(response) {
-      // On success
       statusMessage.innerText = "Thank you! Your feedback was sent successfully.";
       statusMessage.className = "success";
       statusMessage.style.color = "green";
