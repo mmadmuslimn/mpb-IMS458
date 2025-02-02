@@ -8,12 +8,12 @@ body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.5px;
   background-image: url("images/background.png");
-  background-repeat: repeat; /* Repeat the background */
+  background-repeat: repeat; 
   background-attachment: fixed;
-  background-size: 70px 70px; /* Adjust this value for grid-like spacing */
+  background-size: 70px 70px; 
   color: #333;
   line-height: 1.6;
-  position: relative; /* Ensure pseudo-element is positioned correctly */
+  position: relative;
 }
 
 body::before {
@@ -23,15 +23,15 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent overlay if needed */
-  z-index: -1; /* Place the overlay behind the text */
+  background-color: rgba(255, 255, 255, 0.7); 
+  z-index: -1;
 }
 
 header {
-  background-size: cover; /* Makes the image cover the full width */
-  background-position: bottom; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents repetition */
-  background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 
 
   color: white;
@@ -105,7 +105,7 @@ nav::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.3); 
   z-index: -1;
 }
 
@@ -170,6 +170,13 @@ section h2 {
   height: 255px;
 }
 
+.landmark-item a:hover {
+  color: #145374;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
 .landmark-item img {
   width: 100%;
   height: 200px;
@@ -188,11 +195,6 @@ section h2 {
   color: #0d3b66;
 }
 
-.landmark-item a:hover {
-  color: #145374;
-  text-decoration: underline;
-  font-weight: bold;
-}
 
 
 @media (max-width: 768px) {
@@ -246,7 +248,7 @@ section h2 {
 }
 
 .attraction-content .attractions-btn {
-  margin-top: auto; /* Positions the button at the very bottom */
+  margin-top: auto;
 }
 
 .attraction-content h3 {
@@ -262,7 +264,7 @@ section h2 {
   color: #555;
   margin-bottom: 10px;
   line-height: 1.5;
- margin-bottom: auto; /* This helps push the button down if needed */
+ margin-bottom: auto; 
 }
 
 .attractions-btn {
@@ -286,7 +288,7 @@ section h2 {
 
 .attractions-btn:hover {
   background-color: #1565C0;
-  color: #ffffff; /* Keep text white or change if you want */
+  color: #ffffff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -641,6 +643,7 @@ footer a:hover {
       color: gold;
     }
 
+
     .btn {
       display: inline-block;
       width: 150px;
@@ -659,12 +662,12 @@ footer a:hover {
       background: #0056b3;
     }
 
-   
+
     #statusMessage {
       text-align: center;
       font-weight: bold;
       margin-top: 15px;
-      display: none;
+      display: none; 
     }
     #statusMessage.success {
       color: green;
@@ -672,3 +675,90 @@ footer a:hover {
     #statusMessage.error {
       color: red;
     }
+
+
+
+
+
+
+#sp-address {
+    background: url("images/top-background.jpg") no-repeat center center;
+    background-size: cover;
+    color: #333;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+.sp-address-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sp-address-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.sp-address-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+.sp-address-details, 
+.sp-address-contact {
+    text-align: left;
+    padding: 15px;
+}
+
+.sp-address-details h3, 
+.sp-address-contact h3 {
+    font-size: 18px;
+    color: #145374;
+}
+
+
+.sp-address-social {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sp-address-social a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.sp-address-social a:hover {
+    color: #145374;
+}
+
+@media (max-width: 768px) {
+    .sp-address-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sp-address-details, 
+    .sp-address-contact {
+        text-align: center;
+    }
+
+    .sp-address-logo img {
+        max-width: 120px;
+    }
+}
+
